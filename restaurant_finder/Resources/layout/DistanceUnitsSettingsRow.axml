@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="#28252C">
+    <TextView
+        android:text="  Distance Units:"
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="0.3"
+        android:id="@+id/textView1"
+        android:gravity="center_vertical"
+        android:textSize="15dp"
+        android:textColor="#ffe4b331" />
+    <Space
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="0.15" />
+    <LinearLayout
+        android:layout_width="0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.3"
+        android:orientation="vertical">
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="0.3" />
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="0.4"
+            android:id="@+id/spinnerDistanceUnits"
+            android:background="@drawable/ic_DropDown" />
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="0.3" />
+    </LinearLayout>
+    <Space
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="0.25" />
+</LinearLayout>

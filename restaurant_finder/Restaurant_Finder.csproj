@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4EB8A92C-819D-44D0-9996-BB5B95BF2D15}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Restaurant_Finder</RootNamespace>
+    <AssemblyName>Restaurant_Finder</AssemblyName>
+    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+<EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
+<AndroidSupportedAbis>armeabi-v7a;x86;arm64-v8a;x86_64;armeabi</AndroidSupportedAbis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidManagedSymbols>true</AndroidManagedSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+    <Reference Include="System.Json" />
+    <Reference Include="Xamarin.GooglePlayServices.Basement">
+      <HintPath>packages\Xamarin.GooglePlayServices.Basement.29.0.0.2\lib\MonoAndroid41\Xamarin.GooglePlayServices.Basement.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.GooglePlayServices.Base">
+      <HintPath>packages\Xamarin.GooglePlayServices.Base.29.0.0.2\lib\MonoAndroid41\Xamarin.GooglePlayServices.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.GooglePlayServices.Maps">
+      <HintPath>packages\Xamarin.GooglePlayServices.Maps.29.0.0.2\lib\MonoAndroid41\Xamarin.GooglePlayServices.Maps.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v4">
+      <HintPath>..\packages\Xamarin.Android.Support.v4.23.4.0.1\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Vector.Drawable">
+      <HintPath>..\packages\Xamarin.Android.Support.Vector.Drawable.23.4.0.1\lib\MonoAndroid403\Xamarin.Android.Support.Vector.Drawable.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Animated.Vector.Drawable">
+      <HintPath>..\packages\Xamarin.Android.Support.Animated.Vector.Drawable.23.4.0.1\lib\MonoAndroid403\Xamarin.Android.Support.Animated.Vector.Drawable.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.AppCompat">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.AppCompat.23.4.0.1\lib\MonoAndroid403\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
+    </Reference>
+    <Reference Include="Refractored.Controls.CircleImageView">
+      <HintPath>..\packages\Refractored.Controls.CircleImageView.1.0.1\lib\MonoAndroid10\Refractored.Controls.CircleImageView.dll</HintPath>
+    </Reference>
+    <Reference Include="UrlImageViewHelper">
+      <HintPath>..\Components\urlimageviewhelper-1.0.4.2\lib\android\UrlImageViewHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Activities\MainActivity.cs" />
+    <Compile Include="Activities\SettingsActivity.cs" />
+    <Compile Include="Custom Classes\SettingsListViewAdapter.cs" />
+    <Compile Include="Model\RestaurantModel.cs" />
+    <Compile Include="Custom Classes\SearchResultsListViewAdapter.cs" />
+    <Compile Include="Activities\RestaurantMainPageActivity.cs" />
+    <Compile Include="Activities\SearchResultsActivity.cs" />
+    <Compile Include="Activities\SplashActivity.cs" />
+    <Compile Include="Activities\MapActivity.cs" />
+    <Compile Include="Activities\RestaurantSelectionActivity.cs" />
+    <Compile Include="Custom Classes\RestaurantSelectionListViewAdapter.cs" />
+    <Compile Include="Receiver\NetConnectionChangeReceiver.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+    <None Include="Assets\AboutAssets.txt" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Main.axml" />
+    <AndroidResource Include="Resources\values\Strings.xml" />
+    <AndroidResource Include="Resources\mipmap-hdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_Logo.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_textfield_line.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_weather_background.png" />
+    <AndroidResource Include="Resources\menu\menu.xml" />
+    <AndroidResource Include="Resources\layout\TemperatureSettingsRow.axml" />
+    <AndroidResource Include="Resources\layout\SortingSettingsRow.axml" />
+    <AndroidResource Include="Resources\layout\RadiusSettingsRow.axml" />
+    <AndroidResource Include="Resources\layout\NumberOfResultsSettingsRow.axml" />
+    <AndroidResource Include="Resources\layout\DistanceUnitsSettingsRow.axml" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_DropDown.png" />
+    <AndroidResource Include="Resources\layout\SearchResults.axml" />
+    <AndroidResource Include="Resources\layout\RestaurantRow.axml" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_mile.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_map.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_arrow.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_restaurantPlaceholder.png" />
+    <AndroidResource Include="Resources\layout\RestaurantMainPage.axml" />
+    <AndroidResource Include="Resources\layout\Settings.axml" />
+    <AndroidResource Include="Resources\drawable-mdpi\GoldRoundCorner.xml" />
+    <AndroidResource Include="Resources\values\Styles.xml" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_splashscreen.png" />
+    <AndroidResource Include="Resources\values\Colors.xml" />
+    <AndroidResource Include="Resources\layout\Map.axml" />
+    <AndroidResource Include="Resources\drawable-mdpi\button_border.xml" />
+    <AndroidResource Include="Resources\drawable-mdpi\button_border_clicked.xml" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_currentLocation.png" />
+    <AndroidResource Include="Resources\layout\RestaurantSelection.axml" />
+    <AndroidResource Include="Resources\layout\RestaurantTypeRow.axml" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_loading.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\GreenRoundCorner.xml" />
+    <AndroidResource Include="Resources\drawable-mdpi\BlueRoundCorner.xml" />
+    <AndroidResource Include="Resources\drawable-mdpi\ImageOnButton.xml" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_settings.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_switchThumb.png" />
+    <AndroidResource Include="Resources\layout\SpinnerCustom.xml" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_background.png" />
+    <AndroidResource Include="Resources\layout\ToolBar.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_background.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_background.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_background.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_background.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_callButton.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ImageOnButtonUrl.xml" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_url.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_call.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_poweredByFoursquare.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_foursquareLogo.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_fullStar.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_emptyStar.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_halfStar.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ratingBar.xml" />
+    <AndroidResource Include="Resources\drawable-mdpi\ratingbar_empty.xml" />
+    <AndroidResource Include="Resources\drawable-mdpi\ratingbar_filled.xml" />
+    <AndroidResource Include="Resources\layout\Splash.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_arrow.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_call.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_callbutton.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_currentlocation.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_dropdown.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_emptystar.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_foursquarelogo.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_fullstar.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_halfstar.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_map.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_mile.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_poweredbyfoursquare.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_restaurantplaceholder.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_settings.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_splashscreen.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_switchthumb.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_textfield_line.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_url.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_weather_background.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_arrow.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_call.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_callbutton.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_currentlocation.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_dropdown.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_emptystar.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_foursquarelogo.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_fullstar.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_halfstar.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_map.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_mile.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_poweredbyfoursquare.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_restaurantplaceholder.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_settings.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_splashscreen.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_switchthumb.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_textfield_line.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_url.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_weather_background.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_arrow.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_call.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_callbutton.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_currentlocation.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_dropdown.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_emptystar.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_foursquarelogo.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_fullstar.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_halfstar.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_map.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_mile.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_poweredbyfoursquare.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_restaurantplaceholder.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_settings.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_splashscreen.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_switchthumb.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_textfield_line.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_url.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_weather_background.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_arrow.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_call.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_callbutton.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_currentlocation.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_dropdown.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_emptystar.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_foursquarelogo.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_fullstar.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_halfstar.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_map.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_mile.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_poweredbyfoursquare.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_restaurantplaceholder.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_settings.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_splashscreen.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_switchthumb.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_textfield_line.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_url.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_weather_background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\drawable-mdpi\" />
+    <Folder Include="Resources\menu\" />
+    <Folder Include="Custom Classes\" />
+    <Folder Include="Activities\" />
+    <Folder Include="Model\" />
+    <Folder Include="Resources\drawable-hdpi\" />
+    <Folder Include="Resources\drawable-xhdpi\" />
+    <Folder Include="Resources\drawable-xxhdpi\" />
+    <Folder Include="Resources\drawable-xxxhdpi\" />
+    <Folder Include="Receiver\" />
+  </ItemGroup>
+  <ItemGroup>
+    <XamarinComponentReference Include="googleplayservices-maps">
+      <Version>29.0.0.2</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="xamandroidsupportv7appcompat">
+      <Version>23.4.0.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="urlimageviewhelper">
+      <Version>1.0.4.2</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <Import Project="packages\Xamarin.GooglePlayServices.Basement.29.0.0.2\build\Xamarin.GooglePlayServices.Basement.targets" Condition="Exists('packages\Xamarin.GooglePlayServices.Basement.29.0.0.2\build\Xamarin.GooglePlayServices.Basement.targets')" />
+  <Import Project="packages\Xamarin.Android.Support.Vector.Drawable.23.4.0.1\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('packages\Xamarin.Android.Support.Vector.Drawable.23.4.0.1\build\Xamarin.Android.Support.Vector.Drawable.targets')" />
+  <!--<Import Project="..\packages\Xamarin.Android.Support.Vector.Drawable.23.4.0.1\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Vector.Drawable.23.4.0.1\build\Xamarin.Android.Support.Vector.Drawable.targets')" /> -->
+</Project>

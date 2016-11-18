@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/layoutContainer"
+    android:orientation="vertical">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/ToolBar" />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.08" />
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.84">
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:paddingTop="10dp">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:id="@+id/imageView1"
+                    android:scaleType="fitCenter"
+                    android:layout_weight="0.15"
+                    android:src="@drawable/ic_logo" />
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dip"
+                    android:paddingTop="50dp"
+                    android:id="@+id/mainRelativeView"
+                    android:layout_weight="0.75">
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical">
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="0dip"
+                            android:layout_weight="0.17"
+                            android:id="@+id/editTextRelativelayout">
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText1"
+                                android:hint="Restaurant Type"
+                                android:gravity="center_horizontal"
+                                android:backgroundTint="#ba484a4e"
+                                android:textColor="#b6484a4e"
+                                android:textColorHint="#c9484a4e"
+                                android:duplicateParentState="true"
+                                android:textSize="15dp" />
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/transparent"
+                                android:shadowColor="#ffffffff"
+                                android:id="@+id/invisibleButton" />
+                        </RelativeLayout>
+                        <EditText
+                            android:layout_width="fill_parent"
+                            android:layout_height="0dip"
+                            android:layout_weight="0.14"
+                            android:id="@+id/editText2"
+                            android:hint="Enter: City, State"
+                            android:gravity="center"
+                            android:backgroundTint="#ba484a4e"
+                            android:textColor="#b6484a4e"
+                            android:textColorHint="#c9484a4e"
+                            android:textSize="15dp"
+                            android:inputType="text" />
+                        <Space
+                            android:layout_width="fill_parent"
+                            android:layout_height="0dip"
+                            android:layout_weight="0.07" />
+                        <Button
+                            android:layout_width="fill_parent"
+                            android:layout_height="0dip"
+                            android:layout_weight="0.10"
+                            android:id="@+id/button1"
+                            android:backgroundTint="#ffe4b331"
+                            android:background="@drawable/goldroundcorner"
+                            android:text="RESTUARANT NEAR ME"
+                            android:textColor="@android:color/white"
+                            android:textSize="13dp" />
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="0dip"
+                            android:layout_weight="0.14">
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/button2"
+                                android:background="@android:color/transparent"
+                                android:typeface="normal"
+                                android:textSize="12dp"
+                                android:textColor="#BFFFFFFF"
+                                android:textAllCaps="false"
+                                android:text="@string/Advanced_Search" />
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/buttonHide"
+                                android:background="@android:color/transparent"
+                                android:typeface="normal"
+                                android:textSize="12dp"
+                                android:textColor="#BFFFFFFF"
+                                android:textAllCaps="false"
+                                android:text="Hide" />
+                        </RelativeLayout>
+                        <Space
+                            android:layout_width="fill_parent"
+                            android:layout_height="0dip"
+                            android:layout_weight="0.33" />
+                    </LinearLayout>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="0.1"
+                    android:gravity="center_horizontal">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/linearLayoutWeather">
+                        <LinearLayout
+                            android:layout_width="0dip"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="0.25"
+                            android:orientation="vertical">
+                            <Space
+                                android:layout_width="fill_parent"
+                                android:layout_height="0dip"
+                                android:layout_weight="0.1" />
+                            <ImageView
+                                android:id="@+id/weatherImageView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="0dip"
+                                android:layout_weight="0.9"
+                                android:scaleType="fitCenter" />
+                        </LinearLayout>
+                        <TextView
+                            android:id="@+id/temperatureTextView"
+                            android:layout_width="0dip"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="0.25"
+                            android:textColor="#ffffffff"
+                            android:textSize="25dp"
+                            android:gravity="center_vertical" />
+                        <LinearLayout
+                            android:layout_width="0dip"
+                            android:layout_height="fill_parent"
+                            android:orientation="vertical"
+                            android:layout_weight="0.5">
+                            <TextView
+                                android:id="@+id/conditionTextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="0dip"
+                                android:gravity="center_vertical"
+                                android:textColor="#ffffffff"
+                                android:textSize="10dp"
+                                android:layout_weight="1" />
+                            <TextView
+                                android:id="@+id/humidityTextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="0dip"
+                                android:gravity="center_vertical"
+                                android:textColor="#ffffffff"
+                                android:textSize="10dp"
+                                android:layout_weight="1" />
+                            <TextView
+                                android:id="@+id/dateTextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="0dip"
+                                android:gravity="center_vertical"
+                                android:textColor="#ffffffff"
+                                android:textSize="10dp"
+                                android:layout_weight="1" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_weather_background"
+                        android:scaleType="fitCenter" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitCenter"
+                        android:id="@+id/ImageViewLoading"
+                        android:paddingTop="10dp"
+                        android:paddingRight="10dp"
+                        android:src="@drawable/ic_loading" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/noInternetConnectionTextView"
+                        android:gravity="center"
+                        android:textSize="15dp"
+                        android:textColor="#FFFFFF" />
+                </RelativeLayout>
+            </LinearLayout>
+        <!-- 70% Width End-->
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.08" />
+    </LinearLayout>
+</LinearLayout>

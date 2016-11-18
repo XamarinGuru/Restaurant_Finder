@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="hello">Hello World, Click Me!</string>
+	<string name="app_name">Restaurant_Finder</string>
+	 <string name="Advanced_Search"><u>Advanced Search</u></string>
+
+	<string-array name="Restaurant_Types">
+		
+	</string-array>
+
+	<string-array name="DistanceUnitTypes">
+		<item>Kms</item>
+		<item>Miles</item>
+	</string-array>
+
+	<!-- the theme applied to the application or activity -->
+    <style name="CustomActionBarTheme"
+           parent="@android:style/Theme.Holo.Light">
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+    </style>
+ <!-- ActionBar styles -->
+    <style name="MyActionBar"
+           parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">#A97946</item>
+    </style>
+		
+</resources>

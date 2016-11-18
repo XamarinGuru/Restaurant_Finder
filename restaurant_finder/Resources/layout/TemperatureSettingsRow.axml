@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="#28252C">
+    <TextView
+        android:text="  Temperature:"
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="0.3"
+        android:id="@+id/textView1"
+        android:gravity="center_vertical"
+        android:textSize="15dp"
+        android:textColor="#ffe4b331" />
+    <TextView
+        android:text="Celsius "
+        android:layout_width="0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.29"
+        android:id="@+id/textView2"
+        android:gravity="center"
+        android:textSize="13dp"
+        android:textColor="#FFFFFF" />
+    <android.support.v7.widget.SwitchCompat
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="0.12"
+        android:thumbTint="#ffe4b331"
+        android:gravity="right|center_vertical"
+        android:id="@+id/tempUnitsSwitch"
+        android:theme="@style/MyTheme"
+        android:paddingLeft="-6dp" />
+    <TextView
+        android:text=" Fahrenheit"
+        android:layout_width="0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.29"
+        android:id="@+id/textView3"
+        android:gravity="center"
+        android:textSize="13dp"
+        android:textColor="#FFFFFF" />
+</LinearLayout>

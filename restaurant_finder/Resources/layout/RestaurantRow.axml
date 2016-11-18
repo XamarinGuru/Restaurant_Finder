@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="100dp"
+    android:weightSum="6"
+    android:background="#26000000">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_height="fill_parent"
+        android:layout_width="0dip"
+        android:layout_weight="1">
+        <Space
+            android:layout_height="0dip"
+            android:layout_width="fill_parent"
+            android:layout_weight="0.05" />
+    <!--<ImageView
+            android:src="@android:drawable/ic_menu_gallery"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="0.5"
+            android:id="@+id/imageViewRestaurantPicture" /> -->
+        <refractored.controls.CircleImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="0.5"
+            android:layout_gravity="center"
+            android:id="@+id/imageViewRestaurantPicture" />
+        <Space
+            android:layout_height="0dip"
+            android:layout_width="fill_parent"
+            android:layout_weight="0.13" />
+        <LinearLayout
+            android:layout_height="0dip"
+            android:layout_width="fill_parent"
+            android:layout_weight="0.32"
+            android:orientation="horizontal">
+            <Space
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.17" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.18">
+                <Space
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="0.1" />
+                <ImageView
+                    android:src="@drawable/ic_mile"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dip"
+                    android:id="@+id/imageViewDistance"
+                    android:layout_weight="0.4"
+                    android:scaleType="fitCenter" />
+                <Space
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="0.5" />
+            </LinearLayout>
+            <Space
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.05" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.6">
+                <TextView
+                    android:text="0.08"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="0.5"
+                    android:id="@+id/textViewDistance"
+                    android:gravity="bottom"
+                    android:textColor="#CCffffff"
+                    android:textSize="12dp" />
+                <TextView
+                    android:text="miles"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="0.4"
+                    android:id="@+id/textViewDistanceUnits"
+                    android:gravity="top"
+                    android:textColor="#80ffffff"
+                    android:textSize="10dp" />
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="0.1" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_height="fill_parent"
+        android:layout_width="0dip"
+        android:layout_weight="4">
+        <Space
+            android:layout_height="0dip"
+            android:layout_width="fill_parent"
+            android:layout_weight="0.05" />
+        <TextView
+            android:text="Text"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="0.20"
+            android:id="@+id/textViewRestaurantName"
+            android:textColor="#ffe4b331" />
+        <TextView
+            android:text="Text"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="0.15"
+            android:id="@+id/textViewRestaurantAddress"
+            android:textSize="12dp"
+            android:textColor="#80ffffff" />
+        <TextView
+            android:text="Text"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="0.15"
+            android:id="@+id/textViewRestaurantPhoneNumber"
+            android:textSize="12dp"
+            android:textColor="#80ffffff" />
+        <Space
+            android:layout_height="0dip"
+            android:layout_width="fill_parent"
+            android:layout_weight="0.20" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="0.2"
+            android:minWidth="25px"
+            android:minHeight="25px">
+            <RelativeLayout
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/callBtnContent"
+                android:layout_weight="0.25">
+                <Button
+                    android:id="@+id/ButtonCall"
+                    android:background="@drawable/greenroundcorner"
+                    android:textSize="10dp"
+                    android:scaleType="fitXY"
+                    android:textColor="#ffffff"
+                    android:paddingLeft="3dp"
+                    android:gravity="center"
+                    android:stateListAnimator="@null"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:minWidth="25px"
+                    android:minHeight="25px"
+                    android:id="@+id/linearLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/imageView5"
+                        android:src="@drawable/ic_call"
+                        android:layout_weight="0.5"
+                        android:layout_margin="2dp" />
+                    <TextView
+                        android:text="CALL"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/textView1"
+                        android:textColor="#ffffffff"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textSize="10dp" />
+                </LinearLayout>
+            </RelativeLayout>
+            <Space
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="0.05" />
+            <RelativeLayout
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/urlBtnContent"
+                android:layout_weight="0.25">
+                <Button
+                    android:id="@+id/ButtonURL"
+                    android:background="@drawable/blueroundcorner"
+                    android:textSize="10dp"
+                    android:scaleType="fitXY"
+                    android:textColor="#ffffff"
+                    android:paddingLeft="3dp"
+                    android:gravity="center"
+                    android:stateListAnimator="@null"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:minWidth="25px"
+                    android:minHeight="25px"
+                    android:id="@+id/linearLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/imageView5"
+                        android:src="@drawable/imageonbuttonurl"
+                        android:layout_weight="0.5"
+                        android:layout_margin="2dp" />
+                    <TextView
+                        android:text="URL"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/textView1"
+                        android:textColor="#ffffffff"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textSize="10dp" />
+                </LinearLayout>
+            </RelativeLayout>
+            <Space
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="0.05" />
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:orientation="vertical"
+                android:layout_gravity="center">
+                <RatingBar
+                    android:id="@+id/ratingRestaurant"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:numStars="5"
+                    android:stepSize="0.1"
+                    android:isIndicator="true"
+                    android:max="5"
+                    android:progress="3"
+                    android:layout_centerVertical="true"
+                    android:progressTint="#ffe4b331"
+                    android:progressBackgroundTint="#ff000000"
+                    android:secondaryProgressTint="#ff000000"
+                    android:indeterminateTint="#ff000000" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No rating available"
+                    android:textColor="@android:color/white"
+                    android:textSize="11dp"
+                    android:id="@+id/textViewNoRatingAvailable" />
+            </RelativeLayout>
+        </LinearLayout>
+        <Space
+            android:layout_height="0dip"
+            android:layout_width="fill_parent"
+            android:layout_weight="0.05" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:weightSum="7">
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="2.8" />
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1.4">
+            <ImageView
+                android:src="@drawable/ic_map"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/imageView4"
+                android:scaleType="fitCenter" />
+            <ImageView
+                android:src="@drawable/ic_arrow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/imageView3"
+                android:scaleType="fitEnd" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:id="@+id/ButtonMap" />
+        </RelativeLayout>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="2.8" />
+    </LinearLayout>
+</LinearLayout>
